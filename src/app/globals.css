@@ -243,3 +243,374 @@ tbody tr:nth-child(even) td {
 .badge-francisca {}
 
 .badge-edvaldo {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   LOGIN PAGE
+========================================== */
+
+.login-page {
+  min-height: 100vh;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    135deg,
+    #4c1d95 0%,
+    #7c3aed 50%,
+    #5b21b6 100%
+  );
+}
+
+/* Efeitos decorativos no fundo */
+
+.login-background {
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.login-background-one {
+  top: -180px;
+  left: -150px;
+
+  background: rgba(221, 214, 254, 0.35);
+}
+
+.login-background-two {
+  right: -150px;
+  bottom: -180px;
+
+  background: rgba(167, 139, 250, 0.4);
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.login-logo {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  color: #7c3aed;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.login-card {
+  width: 100%;
+
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 60px rgba(49, 10, 95, 0.35);
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.login-header {
+  text-align: center;
+
+  margin-bottom: 30px;
+}
+
+.login-header h1 {
+  margin: 0;
+
+  color: #4c1d95;
+
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.login-header p {
+  margin: 10px 0 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+/* Sobrescreve o form global apenas nesta página */
+
+.login-form {
+  width: 100%;
+  max-width: none;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.login-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.login-form-group label {
+  width: auto;
+
+  display: block;
+
+  color: #4c1d95;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+.login-form-group input {
+  width: 100%;
+
+  padding: 13px 15px;
+
+  border: 1px solid #ddd6fe;
+  border-radius: 10px;
+
+  background: #faf9ff;
+
+  color: #2b1f3a;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.login-form-group input::placeholder {
+  color: #a78bfa;
+}
+
+.login-form-group input:focus {
+  background: #ffffff;
+
+  border-color: #7c3aed;
+
+  box-shadow:
+    0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+
+
+/* ==========================================
+   ERRO
+========================================== */
+
+.login-error {
+  padding: 12px 14px;
+
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+
+  background: #fff1f2;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   BOTÃO
+========================================== */
+
+.login-button {
+  width: 100%;
+
+  min-height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #7c3aed;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(124, 58, 237, 0.3);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.login-button:hover:not(:disabled) {
+  background: #6d28d9;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(124, 58, 237, 0.4);
+}
+
+.login-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   SPINNER
+========================================== */
+
+.login-spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+
+  border-radius: 50%;
+
+  animation: login-spin 0.8s linear infinite;
+}
+
+@keyframes login-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.login-footer {
+  margin: 28px 0 0;
+
+  text-align: center;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   RESPONSIVO
+========================================== */
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 16px;
+  }
+
+  .login-card {
+    padding: 30px 22px;
+
+    border-radius: 20px;
+  }
+
+  .login-header h1 {
+    font-size: 24px;
+  }
+
+  .login-logo {
+    width: 62px;
+    height: 62px;
+
+    font-size: 20px;
+  }
+}
